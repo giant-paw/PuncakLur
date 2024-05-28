@@ -35,7 +35,11 @@ namespace PuncakLur
 
         private void bookingToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            Formboo booking = new Formboo();
 
+            booking.Show();
+
+            this.Hide();
         }
     }
 }
