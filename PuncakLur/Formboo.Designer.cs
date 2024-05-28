@@ -56,6 +56,7 @@
             this.btn_simpan = new System.Windows.Forms.Button();
             this.btn_hapus = new System.Windows.Forms.Button();
             this.btn_batal = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.bookingBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.suwantingDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator1)).BeginInit();
@@ -292,12 +293,22 @@
             this.btn_batal.UseVisualStyleBackColor = true;
             this.btn_batal.Click += new System.EventHandler(this.btn_batal_Click);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(396, 299);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(35, 13);
+            this.label1.TabIndex = 12;
+            this.label1.Text = "label1";
+            // 
             // Formboo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Highlight;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.btn_batal);
             this.Controls.Add(this.btn_hapus);
             this.Controls.Add(this.btn_simpan);
@@ -351,5 +362,6 @@
         private System.Windows.Forms.Button btn_simpan;
         private System.Windows.Forms.Button btn_hapus;
         private System.Windows.Forms.Button btn_batal;
+        private System.Windows.Forms.Label label1;
     }
 }
