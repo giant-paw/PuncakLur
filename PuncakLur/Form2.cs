@@ -16,5 +16,19 @@ namespace PuncakLur
         {
             InitializeComponent();
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnBooking_Click(object sender, EventArgs e)
+        {
+            FormBooking iniBooking = new FormBooking();
+
+            iniBooking.Show();
+
+            this.Hide();
+        }
     }
 }
