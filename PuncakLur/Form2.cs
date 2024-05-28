@@ -19,7 +19,11 @@ namespace PuncakLur
 
         private void button2_Click(object sender, EventArgs e)
         {
+            FormRombongan iniRombongan = new FormRombongan();
 
+            iniRombongan.Show();
+
+            this.Hide();
         }
 
         private void btnBooking_Click(object sender, EventArgs e)
