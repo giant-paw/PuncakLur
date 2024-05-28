@@ -1,6 +1,6 @@
 ﻿namespace PuncakLur
 {
-    partial class FormBooking
+    partial class Formboo
     {
         /// <summary>
         /// Required designer variable.
@@ -29,13 +29,13 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormBooking));
-            this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Formboo));
+            this.kd_rombongan = new System.Windows.Forms.Label();
+            this.jalur_turun = new System.Windows.Forms.Label();
+            this.jmlh_hari = new System.Windows.Forms.Label();
+            this.kode_booking = new System.Windows.Forms.TextBox();
+            this.jlr_turun = new System.Windows.Forms.TextBox();
+            this.jml_hari = new System.Windows.Forms.TextBox();
             this.bindingNavigator1 = new System.Windows.Forms.BindingNavigator(this.components);
             this.bindingNavigatorSeparator = new System.Windows.Forms.ToolStripSeparator();
             this.bindingNavigatorPositionItem = new System.Windows.Forms.ToolStripTextBox();
@@ -51,70 +51,73 @@
             this.suwantingDataSet = new PuncakLur.suwantingDataSet();
             this.bookingBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.bookingTableAdapter = new PuncakLur.suwantingDataSetTableAdapters.bookingTableAdapter();
+            this.btn_tambah = new System.Windows.Forms.Button();
+            this.btn_edit = new System.Windows.Forms.Button();
+            this.btn_simpan = new System.Windows.Forms.Button();
+            this.btn_delete = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator1)).BeginInit();
             this.bindingNavigator1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.suwantingDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bookingBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
-            // label1
+            // kd_rombongan
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(175, 69);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(74, 13);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Kode Booking";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
+            this.kd_rombongan.AutoSize = true;
+            this.kd_rombongan.Location = new System.Drawing.Point(124, 82);
+            this.kd_rombongan.Name = "kd_rombongan";
+            this.kd_rombongan.Size = new System.Drawing.Size(74, 13);
+            this.kd_rombongan.TabIndex = 0;
+            this.kd_rombongan.Text = "Kode Booking";
             // 
-            // textBox1
+            // jalur_turun
             // 
-            this.textBox1.DataBindings.Add(new System.Windows.Forms.Binding("Tag", this.bookingBindingSource, "kode_booking", true));
-            this.textBox1.Location = new System.Drawing.Point(174, 110);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(152, 20);
-            this.textBox1.TabIndex = 1;
+            this.jalur_turun.AutoSize = true;
+            this.jalur_turun.Location = new System.Drawing.Point(128, 152);
+            this.jalur_turun.Name = "jalur_turun";
+            this.jalur_turun.Size = new System.Drawing.Size(60, 13);
+            this.jalur_turun.TabIndex = 1;
+            this.jalur_turun.Text = "Jalur Turun";
             // 
-            // textBox2
+            // jmlh_hari
             // 
-            this.textBox2.DataBindings.Add(new System.Windows.Forms.Binding("Tag", this.bookingBindingSource, "jalur_turun", true));
-            this.textBox2.Location = new System.Drawing.Point(425, 110);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(242, 20);
-            this.textBox2.TabIndex = 2;
+            this.jmlh_hari.AutoSize = true;
+            this.jmlh_hari.Location = new System.Drawing.Point(128, 224);
+            this.jmlh_hari.Name = "jmlh_hari";
+            this.jmlh_hari.Size = new System.Drawing.Size(62, 13);
+            this.jmlh_hari.TabIndex = 2;
+            this.jmlh_hari.Text = "Jumlah Hari";
             // 
-            // textBox3
+            // kode_booking
             // 
-            this.textBox3.DataBindings.Add(new System.Windows.Forms.Binding("Tag", this.bookingBindingSource, "jumlah_hari", true));
-            this.textBox3.Location = new System.Drawing.Point(273, 202);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(248, 20);
-            this.textBox3.TabIndex = 3;
+            this.kode_booking.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bookingBindingSource, "kode_booking", true));
+            this.kode_booking.Location = new System.Drawing.Point(128, 122);
+            this.kode_booking.Name = "kode_booking";
+            this.kode_booking.Size = new System.Drawing.Size(139, 20);
+            this.kode_booking.TabIndex = 3;
             // 
-            // label2
+            // jlr_turun
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(270, 175);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(62, 13);
-            this.label2.TabIndex = 4;
-            this.label2.Text = "Jumlah Hari";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
+            this.jlr_turun.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bookingBindingSource, "jalur_turun", true));
+            this.jlr_turun.Location = new System.Drawing.Point(131, 190);
+            this.jlr_turun.Name = "jlr_turun";
+            this.jlr_turun.Size = new System.Drawing.Size(132, 20);
+            this.jlr_turun.TabIndex = 4;
             // 
-            // label3
+            // jml_hari
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(422, 78);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(60, 13);
-            this.label3.TabIndex = 5;
-            this.label3.Text = "Jalur Turun";
+            this.jml_hari.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bookingBindingSource, "jumlah_hari", true));
+            this.jml_hari.Location = new System.Drawing.Point(135, 257);
+            this.jml_hari.Name = "jml_hari";
+            this.jml_hari.Size = new System.Drawing.Size(127, 20);
+            this.jml_hari.TabIndex = 5;
             // 
             // bindingNavigator1
             // 
             this.bindingNavigator1.AddNewItem = this.bindingNavigatorAddNewItem;
             this.bindingNavigator1.BindingSource = this.bookingBindingSource;
             this.bindingNavigator1.CountItem = this.bindingNavigatorCountItem;
+            this.bindingNavigator1.DataBindings.Add(new System.Windows.Forms.Binding("Tag", this.bookingBindingSource, "kode_booking", true));
             this.bindingNavigator1.DeleteItem = this.bindingNavigatorDeleteItem;
             this.bindingNavigator1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.bindingNavigatorMoveFirstItem,
@@ -138,7 +141,6 @@
             this.bindingNavigator1.Size = new System.Drawing.Size(800, 25);
             this.bindingNavigator1.TabIndex = 6;
             this.bindingNavigator1.Text = "bindingNavigator1";
-            this.bindingNavigator1.RefreshItems += new System.EventHandler(this.bindingNavigator1_RefreshItems);
             // 
             // bindingNavigatorSeparator
             // 
@@ -240,21 +242,63 @@
             // 
             this.bookingTableAdapter.ClearBeforeFill = true;
             // 
-            // FormBooking
+            // btn_tambah
+            // 
+            this.btn_tambah.Location = new System.Drawing.Point(520, 91);
+            this.btn_tambah.Name = "btn_tambah";
+            this.btn_tambah.Size = new System.Drawing.Size(75, 23);
+            this.btn_tambah.TabIndex = 7;
+            this.btn_tambah.Text = "Tambah";
+            this.btn_tambah.UseVisualStyleBackColor = true;
+            this.btn_tambah.Click += new System.EventHandler(this.btn_tambah_Click);
+            // 
+            // btn_edit
+            // 
+            this.btn_edit.Location = new System.Drawing.Point(525, 140);
+            this.btn_edit.Name = "btn_edit";
+            this.btn_edit.Size = new System.Drawing.Size(75, 23);
+            this.btn_edit.TabIndex = 8;
+            this.btn_edit.Text = "Edit";
+            this.btn_edit.UseVisualStyleBackColor = true;
+            // 
+            // btn_simpan
+            // 
+            this.btn_simpan.Location = new System.Drawing.Point(524, 193);
+            this.btn_simpan.Name = "btn_simpan";
+            this.btn_simpan.Size = new System.Drawing.Size(75, 23);
+            this.btn_simpan.TabIndex = 9;
+            this.btn_simpan.Text = "Simpan";
+            this.btn_simpan.UseVisualStyleBackColor = true;
+            // 
+            // btn_delete
+            // 
+            this.btn_delete.Location = new System.Drawing.Point(520, 234);
+            this.btn_delete.Name = "btn_delete";
+            this.btn_delete.Size = new System.Drawing.Size(63, 22);
+            this.btn_delete.TabIndex = 10;
+            this.btn_delete.Text = "Delete";
+            this.btn_delete.UseVisualStyleBackColor = true;
+            // 
+            // Formboo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.Highlight;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btn_delete);
+            this.Controls.Add(this.btn_simpan);
+            this.Controls.Add(this.btn_edit);
+            this.Controls.Add(this.btn_tambah);
             this.Controls.Add(this.bindingNavigator1);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.label1);
-            this.Name = "FormBooking";
-            this.Text = "FormBooking";
-            this.Load += new System.EventHandler(this.FormBooking_Load);
+            this.Controls.Add(this.jml_hari);
+            this.Controls.Add(this.jlr_turun);
+            this.Controls.Add(this.kode_booking);
+            this.Controls.Add(this.jmlh_hari);
+            this.Controls.Add(this.jalur_turun);
+            this.Controls.Add(this.kd_rombongan);
+            this.Name = "Formboo";
+            this.Text = "Formboo";
+            this.Load += new System.EventHandler(this.Formboo_Load);
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator1)).EndInit();
             this.bindingNavigator1.ResumeLayout(false);
             this.bindingNavigator1.PerformLayout();
@@ -267,12 +311,12 @@
 
         #endregion
 
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label kd_rombongan;
+        private System.Windows.Forms.Label jalur_turun;
+        private System.Windows.Forms.Label jmlh_hari;
+        private System.Windows.Forms.TextBox kode_booking;
+        private System.Windows.Forms.TextBox jlr_turun;
+        private System.Windows.Forms.TextBox jml_hari;
         private System.Windows.Forms.BindingNavigator bindingNavigator1;
         private System.Windows.Forms.ToolStripButton bindingNavigatorAddNewItem;
         private System.Windows.Forms.ToolStripLabel bindingNavigatorCountItem;
@@ -288,5 +332,9 @@
         private suwantingDataSet suwantingDataSet;
         private System.Windows.Forms.BindingSource bookingBindingSource;
         private suwantingDataSetTableAdapters.bookingTableAdapter bookingTableAdapter;
+        private System.Windows.Forms.Button btn_tambah;
+        private System.Windows.Forms.Button btn_edit;
+        private System.Windows.Forms.Button btn_simpan;
+        private System.Windows.Forms.Button btn_delete;
     }
 }

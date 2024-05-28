@@ -28,9 +28,16 @@ namespace PuncakLur
 
         private void btnBooking_Click(object sender, EventArgs e)
         {
-            FormBooking iniBooking = new FormBooking();
 
-            iniBooking.Show();
+
+            this.Hide();
+        }
+
+        private void bookingToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Formboo booking = new Formboo();
+
+            booking.Show();
 
             this.Hide();
         }
