@@ -58,17 +58,12 @@
     <Compile Include="Form2.Designer.cs">
       <DependentUpon>Form2.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormBooking.cs">
+    <Compile Include=".cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormBooking.Designer.cs">
-      <DependentUpon>FormBooking.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FormRombongan.cs">
+    <Compile Include=".Designer.cs">
+      <DependentUpon>.cs</DependentUpon>
       <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormRombongan.Designer.cs">
-      <DependentUpon>FormRombongan.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -83,11 +78,8 @@
     <EmbeddedResource Include="Form2.resx">
       <DependentUpon>Form2.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormBooking.resx">
-      <DependentUpon>FormBooking.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FormRombongan.resx">
-      <DependentUpon>FormRombongan.cs</DependentUpon>
+    <EmbeddedResource Include=".resx">
+      <DependentUpon>.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
