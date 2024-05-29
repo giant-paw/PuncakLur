@@ -46,6 +46,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Barang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Barang.Designer.cs">
+      <DependentUpon>Barang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BarangBawaan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BarangBawaan.Designer.cs">
+      <DependentUpon>BarangBawaan.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -71,12 +83,59 @@
     <Compile Include="Formboo.Designer.cs">
       <DependentUpon>Formboo.cs</DependentUpon>
     </Compile>
+    <Compile Include="Pendaki.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pendaki.Designer.cs">
+      <DependentUpon>Pendaki.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Rombongan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Rombongan.Designer.cs">
+      <DependentUpon>Rombongan.cs</DependentUpon>
+    </Compile>
     <Compile Include="suwantingDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>suwantingDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="suwantingDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>suwantingDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="suwantingDataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>suwantingDataSet2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="suwantingDataSet3.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>suwantingDataSet3.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="suwantingDataSet4.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>suwantingDataSet4.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="suwantingDataSet5.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>suwantingDataSet5.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="suwantingDataSet6.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>suwantingDataSet6.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="suwantingDataSet7.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>suwantingDataSet7.xsd</DependentUpon>
     </Compile>
     <Compile Include="Utama.cs">
       <SubType>Form</SubType>
@@ -84,6 +143,12 @@
     <Compile Include="Utama.Designer.cs">
       <DependentUpon>Utama.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Barang.resx">
+      <DependentUpon>Barang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BarangBawaan.resx">
+      <DependentUpon>BarangBawaan.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -96,6 +161,9 @@
     <EmbeddedResource Include="Formboo.resx">
       <DependentUpon>Formboo.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Pendaki.resx">
+      <DependentUpon>Pendaki.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -106,6 +174,12 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Rombongan.resx">
+      <DependentUpon>Rombongan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Utama.resx">
+      <DependentUpon>Utama.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -125,6 +199,83 @@
     </None>
     <None Include="suwantingDataSet.xss">
       <DependentUpon>suwantingDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="suwantingDataSet1.xsc">
+      <DependentUpon>suwantingDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="suwantingDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>suwantingDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="suwantingDataSet1.xss">
+      <DependentUpon>suwantingDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="suwantingDataSet2.xsc">
+      <DependentUpon>suwantingDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="suwantingDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>suwantingDataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="suwantingDataSet2.xss">
+      <DependentUpon>suwantingDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="suwantingDataSet3.xsc">
+      <DependentUpon>suwantingDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="suwantingDataSet3.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>suwantingDataSet3.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="suwantingDataSet3.xss">
+      <DependentUpon>suwantingDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="suwantingDataSet4.xsc">
+      <DependentUpon>suwantingDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="suwantingDataSet4.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>suwantingDataSet4.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="suwantingDataSet4.xss">
+      <DependentUpon>suwantingDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="suwantingDataSet5.xsc">
+      <DependentUpon>suwantingDataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="suwantingDataSet5.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>suwantingDataSet5.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="suwantingDataSet5.xss">
+      <DependentUpon>suwantingDataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="suwantingDataSet6.xsc">
+      <DependentUpon>suwantingDataSet6.xsd</DependentUpon>
+    </None>
+    <None Include="suwantingDataSet6.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>suwantingDataSet6.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="suwantingDataSet6.xss">
+      <DependentUpon>suwantingDataSet6.xsd</DependentUpon>
+    </None>
+    <None Include="suwantingDataSet7.xsc">
+      <DependentUpon>suwantingDataSet7.xsd</DependentUpon>
+    </None>
+    <None Include="suwantingDataSet7.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>suwantingDataSet7.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="suwantingDataSet7.xss">
+      <DependentUpon>suwantingDataSet7.xsd</DependentUpon>
     </None>
   </ItemGroup>
   <ItemGroup>

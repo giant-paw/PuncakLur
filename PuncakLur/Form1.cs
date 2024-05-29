@@ -36,5 +36,14 @@ namespace PuncakLur
         {
 
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Utama masukUtama = new Utama();
+
+            masukUtama.Show();
+
+            this.Hide();
+        }
     }
 }

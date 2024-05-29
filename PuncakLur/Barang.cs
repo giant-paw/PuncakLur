@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace PuncakLur
 {
-    public partial class Formboo : Form
+    public partial class Barang : Form
     {
 
         DataTable dt;
@@ -18,21 +18,45 @@ namespace PuncakLur
         string code;
         int bttn;
 
-        public Formboo()
+        public Barang()
         {
-
             InitializeComponent();
         }
 
-        private void Formboo_Load(object sender, EventArgs e)
+        private void Barang_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'suwantingDataSet.booking' table. You can move, or remove it, as needed.
-            this.bookingTableAdapter.Fill(this.suwantingDataSet.booking);
-            btn_simpan.Enabled = false;
-            kode_booking.Enabled = false;
-            jlr_turun.Enabled = false;
-            jml_hari.Enabled = false;
+            // TODO: This line of code loads data into the 'suwantingDataSet6.barang' table. You can move, or remove it, as needed.
+            this.barangTableAdapter.Fill(this.suwantingDataSet6.barang);
 
+            btn_simpan.Enabled = false;
+            id_barang.Enabled = false;
+            nama_barang.Enabled = false;
+        }
+
+        private void hOMEToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Utama utama = new Utama();
+
+            utama.Show();
+
+            this.Hide();
+        }
+
+        private void bOOKINGToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Formboo masukBooking = new Formboo();
+
+            masukBooking.Show();
+
+            this.Hide();
+        }
+
+        private void rOMBONGANToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Rombongan masukRombongan = new Rombongan();
+
+            masukRombongan.Show();
+            this.Hide();
         }
 
         private void btn_tambah_Click(object sender, EventArgs e)
@@ -44,15 +68,14 @@ namespace PuncakLur
         public void tambah()
         {
             btn_simpan.Enabled = true;
-            kode_booking.Enabled = true;
-            jlr_turun.Enabled = true;
-            jml_hari.Enabled = true;
+            id_barang.Enabled = true;
+            nama_barang.Enabled = true;
+            
 
-            kode_booking.Text= " ";
-            jlr_turun.Text = " ";
-            jml_hari.Text = " ";
+            dt = suwantingDataSet6.Tables["barang"];
 
-            dt = suwantingDataSet.Tables["booking"];
+            id_barang.Text = " ";
+            nama_barang.Text = " ";
 
             btn_tambah.Enabled = false;
             btn_edit.Enabled = false;
@@ -64,43 +87,51 @@ namespace PuncakLur
         {
             if (bttn == 1)
             {
-                dt = suwantingDataSet.Tables["booking"];
+                dt = suwantingDataSet6.Tables["barang"];
                 //Menyimpan data kedalam database
                 dr = dt.NewRow();
-                dr[0] = kode_booking.Text;
-                dr[1] = jlr_turun.Text;
-                dr[2] = jml_hari.Text;
+                dr[0] = id_barang.Text;
+                dr[1] = nama_barang.Text;
+
                 dt.Rows.Add(dr);
             }
             else
             {
-                dt = suwantingDataSet.Tables["booking"];
+                dt = suwantingDataSet6.Tables["barang"];
                 //mencari primary key yang akan diubah datanya
-                dr = dt.Rows.Find(kode_booking.Text);
+                dr = dt.Rows.Find(id_barang.Text);
 
                 //mengubah data kedalam database
                 dr.BeginEdit();
-                dr["jalur_turun"] = jlr_turun.Text;
-                dr["jumlah_hari"] = jml_hari.Text;
+                dr["nama_barang"] = nama_barang.Text;
                 dr.EndEdit();
             }
 
-            bookingTableAdapter.Update(suwantingDataSet);
+            barangTableAdapter.Update(suwantingDataSet6);
+
 
             btn_tambah.Enabled = true;
             btn_edit.Enabled = true;
             btn_hapus.Enabled = true;
             btn_batal.Enabled = false;
 
-            kode_booking.Enabled = false;
-            jlr_turun.Enabled = false;
-            jml_hari.Enabled = false;
+            id_barang.Enabled = false;
+            nama_barang.Enabled = false;
+
+            this.barangTableAdapter.Fill
+                (this.suwantingDataSet6.barang);
+            btn_simpan.Enabled = true;
+            btn_hapus.Enabled = true;
+            btn_edit.Enabled = true;
+            btn_batal.Enabled = true;
+            btn_tambah.Enabled = true;
+
         }
 
         private void btn_hapus_Click(object sender, EventArgs e)
         {
             DialogResult dg;
-            dg = MessageBox.Show(this, "Apakah Anda Yakin Ingin Menghapus Data ini??", "Tekan 'Yes' Untuk Menghapus",
+            dg = MessageBox.Show(this, "Apakah anda ingin menghapus data ini?", "Konfirmasi anda ingin menghapus data ini?",
                 MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
             if (dg == DialogResult.Yes)
@@ -112,22 +143,21 @@ namespace PuncakLur
         public void hapus()
         {
             string code;
-            code = kode_booking.Text;
+            code = id_barang.Text;
             //mencari data yang akan dihapus berdasarkan primary key
-            dr = suwantingDataSet.Tables["booking"].Rows.Find(code);
+            dr = suwantingDataSet6.Tables["barang"].Rows.Find(code);
             //menghapus data
             dr.Delete();
-            bookingTableAdapter.Update(suwantingDataSet);
+            barangTableAdapter.Update(suwantingDataSet6);
         }
 
         private void btn_batal_Click(object sender, EventArgs e)
         {
-            kode_booking.Enabled = false;
-            jlr_turun.Enabled = false;
-            jml_hari.Enabled = false;
+            id_barang.Enabled = false;
+            nama_barang.Enabled = false;
 
-            this.bookingTableAdapter.Fill
-                (this.suwantingDataSet.booking);
+            this.barangTableAdapter.Fill
+                (this.suwantingDataSet6.barang);
             btn_tambah.Enabled = true;
             btn_edit.Enabled = true;
             btn_hapus.Enabled = true;
@@ -139,41 +169,13 @@ namespace PuncakLur
         {
             bttn = 2;
             btn_simpan.Enabled = true;
-            kode_booking.Enabled = true;
-            jlr_turun.Enabled = true;
-            jml_hari.Enabled = true;
+            id_barang.Enabled = true;
+            nama_barang.Enabled = true;
 
             btn_tambah.Enabled = false;
             btn_edit.Enabled = false;
             btn_hapus.Enabled = false;
             btn_batal.Enabled = true;
-        }
-
-        private void hOMEToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Utama iniHome = new Utama();
-
-            iniHome.Show();
-
-            this.Hide();
-        }
-
-        private void rOMBONGANToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Rombongan masukRombongan = new Rombongan();
-
-            masukRombongan.Show();
-
-            this.Hide();
-        }
-
-        private void bARANGToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Barang masukBarang = new Barang();
-
-            masukBarang.Show();
-
-            this.Hide();
         }
 
         private void bARANGBAWAANToolStripMenuItem_Click(object sender, EventArgs e)
